@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+ /*estilo a todo el documento */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.box1 {
+    padding: 100px 0;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;;
+  }
+
+ /*estilo a todas las secciones */
+.box { 
+    padding: 75px 0;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #FFEEB7;
+  }
+
+  .divisores {
+    padding: 15px 0;
+    width: 90%;
+  }
+
+   /*estilo al titulo principal*/
+  .titulo1 {
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    text-align: center;
+  }
+
+   /*estilo a todos los subtemas*/
+  .titulo {
+    color: #FFC300;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+  } 
+
+   /*estilo a todos los subtemas*/
+   .parrafo {
+    color: black;
+    font-size: 16px;
+    text-align: justify;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  } 
+
+   /*un degradado al header*/
+  header {
+    width: 100%;
+    height: 300px;
+    background: #1a2a6c;  
+    background: -webkit-linear-gradient(
+      to right,
+      #fdbb2d,
+      #1a2a6c,
+      #b21f1f
+    ); 
+    background: linear-gradient(
+      to right,
+      #fdbb2d, 
+      #1a2a6c, 
+      #b21f1f
+    ); 
+  }
+
+  /*alineacion del menu*/
+  nav {
+    text-align: right;
+    padding: 30px 50px 0 0;
+  }
+  
+   /*estilo del menu (colores)*/
+  nav > a {
+    color: #ffff;
+    font-weight: 200;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+
+   /*formato cuando se hace click en el menu*/
+  nav > a:hover {
+    text-decoration: underline;
+  }
+
+   /*especificaciones de mi primera seccion*/
+  .clase-acerca-de-mi {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /*imagen en la mitad de la seccion*/
+  .imagen-acerca-de-mi {
+    width: 30%;
+    border-radius: 10px;
+    margin: 1em;
+  }
+  
+  /*texto en la mitad de la seccion*/
+  .clase-acerca-de-mi .texto-acerca-de-mi {
+    width: 48%;
+    text-align: middle;
+  }
+
+  /*estilo de la galeria (dimensiones, borde y posicion)*/
+  .galeria {
+    height: calc(400px + 3em);
+    width: 80%;
+    margin: 1em auto;
+    position: relative;
+  }
+  
+  /*formato a las divisiones dentro de la galeria*/
+  .galeria img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 3s;
+  }
+  
+  /*posicionamiento de los botones de la galeria*/
+  .galeria [type=radio] {
+    position: relative;
+    bottom: calc(-400px - 1.5em);
+  }
+  
+  /*todos estos comandos nos dejan ver todas las columnas la galeria
+  y desplazarme entre ellas*/
+  .galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {
+    opacity: 1;
+  }
+  
+  .galeria input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2) {
+    opacity: 1;
+  }
+  
+  .galeria input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3) {
+    opacity: 1;
+  }
+  
+  .galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
+    opacity: 1;
+  }
+
+  .galeria input[type=radio]:nth-of-type(5):checked ~ img:nth-of-type(5) {
+    opacity: 1;
+  }
+
+  /*redondear las imagenes*/
+  .img {
+    width:100px;
+    height:100px;
+  }
+
+/*estilo de la tabla*/
+
+table, th, td {
+    margin: 5%;
+    border: 1px solid;
+    border-collapse: collapse;
+    border-color: black;
+    padding: 5px;
+    width: 20%;
+}
+
+th{
+  color: #FFC300;
+  font-size: 20px;
+  text-align: left;
+  padding: 5px
+}
+
+/*centrar los elementos de la tabla*/
+td{
+  padding: 10px;
+  font-size: 14px;
+}
+
+/*ancho de columnas*/
+table td:first-child {
+    width: 33.33%;
+  }
+
+  table td:nth-child(2) {
+    width: 33.33%;
+  }
+
+  table td:last-child {
+    width: 33.33%;
+  }
+
+  /* contacteneos*/
+
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+ 
+form {
+    margin-left: 10%;
+    margin-right: 10%;
+    width:100%;
+    position: center;
+}
+
+form input {
+  width: 80%;
+  height: 25px;
+}
+ 
+#submit {
+    width:85px;
+    height:35px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+    background-color: #1a2a6c;
+    color: white;
+}
+
+/*footer*/
+.column {
+  float: right;
+  width: 20%;
+  align-self: center;
+  padding: 5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

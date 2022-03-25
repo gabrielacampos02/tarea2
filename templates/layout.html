@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block customCSS %}{% endblock customCSS %}
+    <title>{% block title %}{% endblock title %}</title>
+</head> 
+
+<body>
+
+    <!-- top nav bar -->
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href=#S1>Colombia</a>
+            <a href=#S2>Estadísticas</a>
+            <a href=#S3>Contactenos</a>
+            <a href=#S4>Acerca de mí</a>
+        </nav>
+        <section class="box1 principal">
+            <h1 class="titulo1 pagina-web">Colombia</h1>
+        </section>
+    </header>
+    <!-- top nav bar -->
+
+    {% block contents %}{% endblock contents %}
+    <br>
+    {% block customScripts %}{% endblock customScripts %}
+</body>
+
+</html>

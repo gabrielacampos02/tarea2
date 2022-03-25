@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block customCSS %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock customCSS %}
+
+{% block title %}Colombia{% endblock title %}
+
+{% block contents %}
+
+<div>
+    <br>
+    <br>
+
+        <h2 class="titulo">show messages</h2>
+
+    <div>
+        <table id="messages">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Mensaje</th>
+            </tr>
+            {% for message in messagesList %}
+            <tr>
+                <td>{{ message["id"] }}</td>
+                <td>{{ message["firstname"] }}</td>
+                <td>{{ message["lastname"] }}</td>
+                <td>{{ message["email"] }}</td>
+                <td>{{ message["message"] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+{% endblock contents %}
+
+{% block customScripts %}{% endblock customScripts %}
