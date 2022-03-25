@@ -5,6 +5,6 @@ from models.contactus import messages
 mensajes = Blueprint("mensajes", __name__, url_prefix="/")
 
 @mensajes.route("/messages",  methods=["GET", "POST"])
-def messages():
+def messagess():
     messagesList = messages.query.all()
     return render_template("mensajes.html", messagesList=messagesList)

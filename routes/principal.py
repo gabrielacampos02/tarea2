@@ -19,8 +19,3 @@ def mensajenuevo():
             db.session.add(newmessage)
             db.session.commit()
     return render_template("principal.html", form=form)
-
-@principal.route("/messages")
-def messagess():
-    messagesList = messages.query.all()
-    return render_template("mensajes.html", messagesList=messagesList)
